@@ -6,10 +6,14 @@
      require_once __DIR__  . '/AnonimousUser.php';
      require_once __DIR__  . '/SubscibedUser.php';
      require_once __DIR__  . '/PrepaidCard.php';
-
+     // Dog Food
      $dogFood = new Food (1, 'Dog', 'Small',);
+     // Cat Toys
      $catToys = new Toys (5, 'Cat', 'Medium', );
+     $catToys->newProduct = 'New Product';
+     // Fish Kennel
      $fishKennel = new Kennel (20, 'Fish', 'Large', );
+     // Users
      $AnonimousUser = new AnonimousUser('AnonimousUser');
      $SubscibedUser = new SubscibedUser('SubscibedUser');
 
@@ -34,6 +38,7 @@
           echo 'MI DISPIACE';
      }
 
+     
         
         
 
