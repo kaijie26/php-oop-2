@@ -41,16 +41,17 @@
         }
 
         public function makePayment($prepaidCard){
+            // Totale da pagare
             $totalToPay = $this->calculateTotalPrice();
             $message;
 
             if($prepaidCard->avaibleBalance < $totalToPay ){
-                $message = 'saldo non disponibile';
-            }else{
-                $message = 'ok';
-            }
 
-            return $message;
+                 throw new Exception ('Caro cliente, saldo non disponibile');
+            }else{
+
+                return 'ok';
+            }
 
         }
 
